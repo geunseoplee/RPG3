@@ -17,3 +17,13 @@ BEGIN_RCPP
         return rcpp_result_gen;
 END_RCPP
 }
+
+static const R_CallMethodDef CallEntries[] = {
+    {"rpg3_prg3", (DL_FUNC) &rpg3_rpg3, 2},
+    {NULL, NULL, 0}
+};
+
+RcppExport void R_init_rpg3(DllInfo *dll) {
+    R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
+    R_useDynamicSymbols(dll, FALSE);
+}
