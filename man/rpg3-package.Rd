@@ -3,7 +3,7 @@
 \alias{rpg3}
 \docType{package}
 \title{
-What the package does (short line)
+rpg3 (short line)
 ~~ package title ~~
 }
 \description{
