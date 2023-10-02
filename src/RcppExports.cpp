@@ -10,7 +10,7 @@ using namespace Rcpp;
 List rpg3(int num, double z);
 RcppExport List rpg3_rpg3(SEXP nSEXP, SEXP zSEXP) {
 BEGIN_RCPP
-    SEXP __sexp_result;
+    List __sexp_result;
     {
         Rcpp::RNGScope __rngScope;
         Rcpp::traits::input_parameter< int >::type n(nSEXP );
