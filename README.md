@@ -1,4 +1,4 @@
-# helloPG
+# RPG3
 
 This is a package skeleton for incorporating the Polya-Gamma distribution into your own code or R package. It assumes that you will be using RcppArmadillofor matrix computations.
 
