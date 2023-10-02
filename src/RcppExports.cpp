@@ -6,7 +6,7 @@
 
 using namespace Rcpp;
 
-// helloPG
+// rpg3
 List rpg3(int num, double z);
 RcppExport List rpg3_rpg3(SEXP nSEXP, SEXP zSEXP) {
 BEGIN_RCPP
