@@ -7,15 +7,15 @@
 using namespace Rcpp;
 
 // helloPG
-SEXP helloPG(int n, double z);
-RcppExport SEXP helloPG_helloPG(SEXP nSEXP, SEXP zSEXP) {
+List rpg3(int num, double z);
+RcppExport List rpg3_rpg3(SEXP nSEXP, SEXP zSEXP) {
 BEGIN_RCPP
     SEXP __sexp_result;
     {
         Rcpp::RNGScope __rngScope;
         Rcpp::traits::input_parameter< int >::type n(nSEXP );
         Rcpp::traits::input_parameter< double >::type z(zSEXP );
-        SEXP __result = helloPG(n, z);
+        SEXP __result = rpg3(n, z);
         PROTECT(__sexp_result = Rcpp::wrap(__result));
     }
     UNPROTECT(1);
