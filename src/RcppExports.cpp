@@ -10,15 +10,10 @@ using namespace Rcpp;
 List rpg3(int num, double z);
 RcppExport List rpg3_rpg3(SEXP nSEXP, SEXP zSEXP) {
 BEGIN_RCPP
-    SEXP __sexp_result;
-    {
-        Rcpp::RNGScope __rngScope;
         Rcpp::traits::input_parameter< int >::type n(nSEXP );
         Rcpp::traits::input_parameter< double >::type z(zSEXP );
-        List __result = rpg3(n, z);
-        PROTECT(__sexp_result = Rcpp::wrap(__result));
-    }
-    UNPROTECT(1);
-    return __sexp_result;
+
+        Rcpp::RObject rcpp_result_gen; = Rcpp::wrap(rpg3(n, z));
+        return rcpp_result_gen;
 END_RCPP
 }
