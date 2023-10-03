@@ -2,5 +2,5 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 rpg3 <- function(n, z) {
-    .Call('rpg3_rpg3', PACKAGE = 'rpg3', n, z)
+    .Call('helloPG_helloPG', PACKAGE = 'helloPG', n, z)
 }
