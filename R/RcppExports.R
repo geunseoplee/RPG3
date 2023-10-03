@@ -4,3 +4,7 @@
 helloPG <- function(n, z) {
     .Call('helloPG_helloPG', PACKAGE = 'helloPG', n, z)
 }
+
+rpg2 <- function(n, z) {
+    .Call('helloPG_rpg2', PACKAGE = 'helloPG', n, z)
+}
