@@ -60,7 +60,7 @@ SEXP helloPG(int n, double z) {
 }
 
 // [[Rcpp::export]]
-SEXP rpg2(int n, double z) {
+List rpg2(int n, double z) {
 
 	vec rpg_vec(n);
 	for(int i = 0;i<n;i++)
@@ -69,5 +69,5 @@ SEXP rpg2(int n, double z) {
 		rpg_vec(i) = rpg_i;
 	}
 	
-	return Rcpp::List::Create(Rcpp::Named("draws")=rpg_vec);
+	return List::Create(rpg_vec);
 }
