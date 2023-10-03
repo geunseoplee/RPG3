@@ -42,6 +42,21 @@ SEXP helloPG(int n, double z) {
 			    );
 }
 
+// [[Rcpp::export]]
+SEXP rpg2(int n, double z) {
+  // returns n draws from PG(1,z)
+  n = 2;
+  colvec pgscale(n, fill::ones);
+  colvec pgshape(n);
+  for(int i=0; i<n; i++) {
+    pgshape[i] = z;
+  }
+  colvec out = rpg(pgscale, pgshape);
+
+  return Rcpp::List::create(Rcpp::Named("draws")=out
+			    );
+}
+
 /*
 #include "RcppArmadillo.h"
 #include <R_ext/Utils.h>
