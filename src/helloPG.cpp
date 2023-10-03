@@ -42,7 +42,7 @@ double rpg_single(double scale) {
 #ifdef USE_R
   PutRNGstate();
 #endif
-  return result;
+  return (double)result[0];
 }
 
 // [[Rcpp::export]]
