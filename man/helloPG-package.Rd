@@ -1,9 +1,9 @@
-\name{rpg3-package}
-\alias{rpg3-package}
-\alias{rpg3}
+\name{helloPG-package}
+\alias{helloPG-package}
+\alias{helloPG}
 \docType{package}
 \title{
-rpg3 (short line)
+What the package does (short line)
 ~~ package title ~~
 }
 \description{
@@ -12,7 +12,7 @@ More about what it does (maybe more than one line)
 }
 \details{
 \tabular{ll}{
-Package: \tab rpg3\cr
+Package: \tab helloPG\cr
 Type: \tab Package\cr
 Version: \tab 1.0\cr
 Date: \tab 2014-03-22\cr
