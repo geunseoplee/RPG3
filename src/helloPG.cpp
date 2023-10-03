@@ -33,7 +33,7 @@ SEXP helloPG(int n, double z) {
   // returns n draws from PG(1,z)
   colvec pgscale(n, fill::ones);
   colvec pgshape(n);
-  for(int i=0; i<n; i++) {
+  for(int i=0; i<2; i++) {
     pgshape[i] = z;
   }
   colvec out = rpg(pgscale, pgshape);
