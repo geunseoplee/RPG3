@@ -38,7 +38,7 @@ double rpg_single(double scale) {
 #endif
   colvec result(1);
   result[0] = pg.draw(1, scale, r);
-  }
+  
 #ifdef USE_R
   PutRNGstate();
 #endif
