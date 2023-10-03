@@ -69,5 +69,5 @@ List rpg2(int n, double z) {
 		rpg_vec(i) = rpg_i;
 	}
 	
-	return List::Create(rpg_vec);
+	return List::create(rpg_vec);
 }
