@@ -62,11 +62,16 @@ SEXP helloPG(int n, double z) {
 // [[Rcpp::export]]
 List rpg2(int n, double z) {
 
+
+	colvec pgscale(1, fill::ones);
+  	colvec pgshape(1);
+	pgshape[0] = z;
+	
 	vec rpg_vec(n);
 	for(int i = 0;i<n;i++)
 	{
-		double rpg_i = rpg_single(z);
-		rpg_vec(i) = rpg_i;
+		  colvec out = rpg(pgscale, pgshape);
+	          rpg_vec(i) = out[0];
 	}
 	
 	return Rcpp::List::create(rpg_vec
