@@ -69,5 +69,6 @@ List rpg2(int n, double z) {
 		rpg_vec(i) = rpg_i;
 	}
 	
-	return List::create(rpg_vec);
+	return Rcpp::List::create(Rcpp::Named("draws")=rpg_vec
+			    );
 }
