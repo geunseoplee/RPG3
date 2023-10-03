@@ -36,13 +36,13 @@ double rpg_single(double scale) {
 #ifdef USE_R
   GetRNGstate();
 #endif
-  colvec result(1);
-  result[0] = pg.draw(1, scale, r);
+  double result;
+  result = pg.draw(1, scale, r);
   
 #ifdef USE_R
   PutRNGstate();
 #endif
-  return (double)result[0];
+  return result;
 }
 
 // [[Rcpp::export]]
@@ -69,6 +69,6 @@ List rpg2(int n, double z) {
 		rpg_vec(i) = rpg_i;
 	}
 	
-	return Rcpp::List::create(Rcpp::Named("draws")=rpg_vec
+	return Rcpp::List::create(rpg_vec
 			    );
 }
