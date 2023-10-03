@@ -32,7 +32,7 @@ BEGIN_RCPP
         Rcpp::RNGScope __rngScope;
         Rcpp::traits::input_parameter< int >::type n(nSEXP );
         Rcpp::traits::input_parameter< double >::type z(zSEXP );
-        SEXP __result = helloPG(n, z);
+        SEXP __result = rpg2(n, z);
         PROTECT(__sexp_result = Rcpp::wrap(__result));
     }
     UNPROTECT(1);
