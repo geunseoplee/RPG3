@@ -36,7 +36,6 @@ double rpg_single(double scale) {
 #ifdef USE_R
   GetRNGstate();
 #endif
-  int d = shape.n_elem;
   colvec result(1);
   result[0] = pg.draw(1, scale, r);
   }
