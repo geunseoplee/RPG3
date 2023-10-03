@@ -6,24 +6,19 @@
 
 using namespace Rcpp;
 
-// rpg3
-List rpg3(int num, double z);
-RcppExport SEXP rpg3_rpg3(SEXP nSEXP, SEXP zSEXP) {
+// helloPG
+SEXP helloPG(int n, double z);
+RcppExport SEXP helloPG_helloPG(SEXP nSEXP, SEXP zSEXP) {
 BEGIN_RCPP
+    SEXP __sexp_result;
+    {
+        Rcpp::RNGScope __rngScope;
         Rcpp::traits::input_parameter< int >::type n(nSEXP );
         Rcpp::traits::input_parameter< double >::type z(zSEXP );
-
-        Rcpp::RObject rcpp_result_gen = Rcpp::wrap(rpg3(n, z));
-        return rcpp_result_gen;
+        SEXP __result = helloPG(n, z);
+        PROTECT(__sexp_result = Rcpp::wrap(__result));
+    }
+    UNPROTECT(1);
+    return __sexp_result;
 END_RCPP
-}
-
-static const R_CallMethodDef CallEntries[] = {
-    {"rpg3_prg3", (DL_FUNC) &rpg3_rpg3, 2},
-    {NULL, NULL, 0}
-};
-
-RcppExport void R_init_rpg3(DllInfo *dll) {
-    R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
-    R_useDynamicSymbols(dll, FALSE);
 }
